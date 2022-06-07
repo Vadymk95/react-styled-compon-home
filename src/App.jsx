@@ -1,12 +1,17 @@
 import React from 'react';
-import './App.css';
+import Controls from './components/Controls';
+import Header from './components/Header';
+import Main from './components/Main';
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Header />
+      <Main>
+        <Controls />
+      </Main>
+    </>
   );
-}
+};
 
 export default App;
