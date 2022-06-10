@@ -27,11 +27,18 @@ const HomePage = ({ countries, setCountries }) => {
   useEffect(() => {
     if (!countries.length) {
       axios(ALL_COUNTRIES)
-        .then(({ data }) => setCountries(data))
+        .then(({ data }) => {
+          setCountries(data)
+        })
         .catch((err) => console.error(err));
     }
-
+    // eslint-disable-next-line
   }, []);
+
+  useEffect(() => {
+    handleSearch();
+    // eslint-disable-next-line
+  }, [countries])
 
   return (
     <>
