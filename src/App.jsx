@@ -1,14 +1,16 @@
-import React from 'react';
-import Controls from './components/Controls';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
+import { RouterApp } from './router/Router';
+
 
 const App = () => {
+  const [countries, setCountries] = useState([]);
   return (
     <>
       <Header />
       <Main>
-        <Controls />
+        <RouterApp countries={countries} setCountries={setCountries}/>
       </Main>
     </>
   );

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Container } from './Container';
 import { IoMoonOutline, IoMoon } from 'react-icons/io5';
 
@@ -13,8 +14,8 @@ const Wrapper = styled.div`
   align-items: center;
   padding: 2rem 0;
 `;
-const Title = styled.a.attrs({
-  href: '/',
+const Title = styled(NavLink).attrs({
+  to: '/',
 })`
   text-decoration: none;
   font-size: var(--fs-sm);
